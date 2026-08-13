@@ -59,7 +59,7 @@ jobs:
         with:
           curseforge-id: 1650450
           curseforge-token: ${{ secrets.CURSEFORGE_TOKEN }}
-          curseforge-files-secondary: release/!(*-@(dev|sources|javadoc)).jar
+          files: release/!(*-@(dev|sources|javadoc)).jar
           name: Rangefinder ${{ github.ref_name }}
           version: ${{ github.ref_name }}
           version-type: release
