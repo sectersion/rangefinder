@@ -1,0 +1,5 @@
+{
+	"key.rangefinder.measure": "Measure Distance",
+	"message.rangefinder.distance": "Distance: %.1f blocks",
+	"message.rangefinder.no_block": "No block in range"
+}
