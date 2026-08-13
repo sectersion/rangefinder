@@ -54,3 +54,15 @@ jobs:
         with:
           generate_release_notes: true
           files: release/*.jar
+      - name: publish to CurseForge
+        uses: Kir-Antipov/mc-publish@v3
+        with:
+          curseforge-id: 1650450
+          curseforge-token: ${{ secrets.CURSEFORGE_TOKEN }}
+          files: release/rangefinder-*.jar
+          name: Rangefinder ${{ github.ref_name }}
+          version: ${{ github.ref_name }}
+          version-type: release
+          loaders: fabric
+          game-versions: 26.2
+          java: 25
