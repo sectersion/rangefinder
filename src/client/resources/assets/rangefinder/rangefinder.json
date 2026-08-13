@@ -1,0 +1,10 @@
+{
+  "tolerance": 5,
+  "cannons": [
+    {
+      "name": "Template Cannon",
+      "minRange": 40,
+      "maxRange": 50
+    }
+  ]
+}
