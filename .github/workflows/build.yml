@@ -25,7 +25,13 @@ jobs:
       - name: make gradle wrapper executable
         run: chmod +x ./gradlew
       - name: build
-        run: ./gradlew build
+        run: |
+          for attempt in 1 2 3; do
+            ./gradlew build && exit 0
+            echo "Gradle build attempt ${attempt} failed; retrying..."
+            sleep 15
+          done
+          exit 1
       - name: capture build artifacts
         uses: actions/upload-artifact@v7
         with:
